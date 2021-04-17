@@ -4,6 +4,7 @@ import {
 } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 const HomeSearch = () => (
   <View>
@@ -20,13 +21,18 @@ const HomeSearch = () => (
     {/* previous destination */}
     <View style={styles.row}>
       <View style={styles.iconContainer}>
-        <AntDesign />
-        <Image />
+        <AntDesign name="clockcircle" size={20} color="#ffffff" />
       </View>
-      <Text>Spin Nightclub</Text>
+      <Text style={styles.destinationText}>Spin Nightclub</Text>
     </View>
 
     {/* home destination */}
+    <View style={styles.row}>
+      <View style={[styles.iconContainer, { backgroundColor: '#218cff' }]}>
+        <Entypo name="home" size={20} color="#ffffff" />
+      </View>
+      <Text style={styles.destinationText}>Spin Nightclub</Text>
+    </View>
   </View>
 );
 
@@ -55,4 +61,25 @@ const styles = StyleSheet.create({
     borderRadius: 50,
 
   },
+  row: {
+    flexDirection: 'row',
+    borderBottomWidth: 1,
+    alignItems: 'center',
+    padding: 15,
+    borderColor: '#b3b3b3',
+  },
+  iconContainer: {
+    backgroundColor: '#b3b3b3',
+    padding: 10,
+    borderRadius: 25,
+
+  },
+  destinationText: {
+    marginLeft: 10,
+    fontWeight: '500',
+    fontSize: 16,
+    backgroundColor: '#b3b3b3',
+
+  },
+
 });
