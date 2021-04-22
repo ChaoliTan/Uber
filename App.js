@@ -12,10 +12,10 @@ import DestinationSearch from './src/screens/DestinationSearch';
 import HomeScreen from './src/screens/HomeScreen';
 
 const App = () => (
-  <>
-    <HomeScreen />
-    <DestinationSearch />
-  </>
+    <>
+        {/* <HomeScreen /> */}
+        <DestinationSearch />
+    </>
 );
 
 export default App;
