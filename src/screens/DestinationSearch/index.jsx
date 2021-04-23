@@ -37,7 +37,7 @@ const DestinationSearch = () => {
           }}
           fetchDetails
           query={{
-            key: 'AIzaSyDX0rNKcUIjZnTu2VBFDiKLkbwkE9o6MFI',
+            // key: 'AIzaSyDX0rNKcUIjZnTu2VBFDiKLkbwkE9o6MFI',
             language: 'en',
           }}
         />
