@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-    StyleSheet, Text, View, Image,
-} from 'react-native';
+import {StyleSheet, Text, View, Image} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 /* global require */
@@ -11,31 +9,25 @@ const icons = {
     UberXL: require('../../assets/images/UberXL.jpeg'),
 };
 
-const UberTypesRow = (props) => {
-    const { type: { type, price } } = props;
+const UberTypesRow = props => {
+    const {
+        type: {type, price},
+    } = props;
     return (
         <View style={styles.container}>
             {/* Image */}
             <Image style={styles.image} source={icons[type]} />
             <View style={styles.middleContainer}>
-            <Text style={styles.type}>
-                    {type}
-                    {' '}
-                    <Ionicons name="person" size={16} />
-                  3
-              </Text>
-                <Text style={styles.time}>
-                8:03PM drop off
+                <Text style={styles.type}>
+                    {type} <Ionicons name="person" size={16} />3
                 </Text>
-          </View>
+                <Text style={styles.time}>8:03PM drop off</Text>
+            </View>
             <View style={styles.rightContainer}>
                 <Ionicons name="pricetag" size={18} color="#42d742" />
-                <Text style={styles.price}>
-                est. $
-                    {price}
-              </Text>
-          </View>
-      </View>
+                <Text style={styles.price}>est. ${price}</Text>
+            </View>
+        </View>
     );
 };
 
@@ -44,13 +36,13 @@ export default UberTypesRow;
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        // justifyContent: 'space-between',
         alignItems: 'center',
         padding: 20,
     },
     image: {
-        height: 50,
-        width: 50,
+        height: 70,
+        width: 80,
         resizeMode: 'contain',
     },
     middleContainer: {
@@ -63,7 +55,7 @@ const styles = StyleSheet.create({
         marginBottom: 5,
     },
     time: {
-
+        color: '#5d5d5d',
     },
     rightContainer: {
         width: 100,

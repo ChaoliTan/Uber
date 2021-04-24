@@ -6,16 +6,16 @@ import typesData from '../../assets/data/types';
 const UberTypes = () => {
     const confirm = () => {};
     return (
-        <View style={{height: '100%'}}>
+        <View>
             {typesData.map((type, i) => (
                 <UberTypesRow type={type} key={i} />
             ))}
             <Pressable
                 onPress={confirm}
                 style={{
-                    width: '100%',
                     backgroundColor: 'black',
                     padding: 10,
+                    margin: 10,
                     alignItems: 'center',
                 }}>
                 <Text style={{color: 'white', fontWeight: 'bold'}}>
