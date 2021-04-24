@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import {
   StyleSheet, SafeAreaView, TextInput, View, Text,
 } from 'react-native';
-import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
+// import { GooglePlacesAutocomplete } from 'react-native-google-places-autocomplete';
 
 const DestinationSearch = () => {
   const [originPlace, setOriginPlace] = useState(null);
-  const [destinationPlace, setDestinationPlace] = useState('');
+  const [destinationPlace, setDestinationPlace] = useState(null);
 
   return (
     <SafeAreaView>
