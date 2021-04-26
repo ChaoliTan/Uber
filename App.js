@@ -15,8 +15,8 @@ import SearchResults from './src/screens/SearchResults';
 const App = () => (
     <>
         {/* <HomeScreen /> */}
-        {/* <DestinationSearch /> */}
-        <SearchResults />
+        <DestinationSearch />
+        {/* <SearchResults /> */}
     </>
 );
 
