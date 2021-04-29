@@ -1,14 +1,34 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
+import {Entypo} from 'react-native-vector-icons/Entypo';
 
-const PlaceRow = () => {
+const PlaceRow = ({data}) => {
+    console.log(data);
     return (
-        <View>
-            <Text>not just a com</Text>
+        <View style={styles.row}>
+            {/* <View style={styles.iconContainer}>
+                <Entypo name="location-pin" siz={20} color={'white'} />
+            </View> */}
+            <Text style={styles.locationText}>
+                {data.description || data.vicinity}
+            </Text>
         </View>
     );
 };
 
 export default PlaceRow;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    row: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginVertical: 10,
+    },
+    iconContainer: {
+        backgroundColor: '#a2a2a2',
+        padding: 5,
+        borderRadius: 50,
+        marginRight: 15,
+    },
+    locationText: {},
+});

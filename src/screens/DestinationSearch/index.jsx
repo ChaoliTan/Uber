@@ -7,6 +7,15 @@ const DestinationSearch = () => {
     const [originPlace, setOriginPlace] = useState(null);
     const [destinationPlace, setDestinationPlace] = useState(null);
 
+    const homePlace = {
+        description: 'Home',
+        geometry: {location: {lat: 48.8152937, lng: 2.4597668}},
+    };
+    const workPlace = {
+        description: 'Work',
+        geometry: {location: {lat: 48.8496818, lng: 2.2940881}},
+    };
+
     return (
         <SafeAreaView>
             <View style={styles.container}>
@@ -16,7 +25,10 @@ const DestinationSearch = () => {
                         // 'details' is provided when fetchDetails = true
                         setOriginPlace({data, details});
                     }}
+                    enablePoweredByContainer={false}
                     suppressDefaultStyles
+                    currentLocation={true}
+                    currentLocationLabel="Current location"
                     styles={{
                         textInput: styles.textInput,
                         container: styles.autocompleteContainer,
@@ -29,6 +41,10 @@ const DestinationSearch = () => {
                         language: 'en',
                     }}
                     renderRow={data => <PlaceRow data={data} />}
+                    renderDescription={data =>
+                        data.description || data.vicinity
+                    }
+                    predefinedPlaces={[homePlace, workPlace]}
                 />
 
                 <GooglePlacesAutocomplete
