@@ -15,7 +15,7 @@ const HomeMap = () => {
         // <View style={styles.container}>
         <MapView
             style={{width: '100%', height: '100%'}}
-            // provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+            provider={PROVIDER_GOOGLE} // remove if not using Google Maps
             showsUserLocation={true}
             region={{
                 latitude: 28.450627,

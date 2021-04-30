@@ -52,8 +52,8 @@ const App = () => {
 
     return (
         <>
-            {/* <HomeScreen /> */}
-            <DestinationSearch />
+            <HomeScreen />
+            {/* <DestinationSearch /> */}
             {/* <SearchResults /> */}
         </>
     );

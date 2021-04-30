@@ -13,14 +13,14 @@ const icons = {
 
 const HomeMap = () => {
     const {height, width} = Dimensions.get('window');
-    const LATITUDE_DELTA = 0.058; // zoom level
+    const LATITUDE_DELTA = 0.0222; // zoom level
     const LONGITUDE_DELTA = LATITUDE_DELTA * (width / height);
 
     return (
         // <View style={styles.container}>
         <MapView
             style={{width: '100%', height: '100%'}}
-            // provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+            provider={PROVIDER_GOOGLE} // remove if not using Google Maps
             showsUserLocation={true}
             region={{
                 latitude: 28.450627,
