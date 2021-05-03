@@ -10,9 +10,7 @@
 import React, {useEffect} from 'react';
 import {PermissionsAndroid, Platform} from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
-import DestinationSearch from './src/screens/DestinationSearch';
-import HomeScreen from './src/screens/HomeScreen';
-import SearchResults from './src/screens/SearchResults';
+import Router from './src/navigation/Root';
 
 navigator.geolocation = require('@react-native-community/geolocation');
 
@@ -52,9 +50,7 @@ const App = () => {
 
     return (
         <>
-            <HomeScreen />
-            {/* <DestinationSearch /> */}
-            {/* <SearchResults /> */}
+            <Router />
         </>
     );
 };
