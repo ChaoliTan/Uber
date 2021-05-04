@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {StyleSheet, SafeAreaView, TextInput, View, Text} from 'react-native';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
+import {useNavigation} from '@react-navigation/native';
 import PlaceRow from './PlaceRow';
 
 const DestinationSearch = () => {
@@ -15,6 +16,17 @@ const DestinationSearch = () => {
         description: 'Work',
         geometry: {location: {lat: 48.8496818, lng: 2.2940881}},
     };
+
+    const navigation = useNavigation();
+
+    useEffect(() => {
+        if (originPlace && destinationPlace) {
+            navigation.navigate('SearchResults', {
+                originPlace,
+                destinationPlace,
+            });
+        }
+    }, [originPlace, destinationPlace]);
 
     return (
         <SafeAreaView>
