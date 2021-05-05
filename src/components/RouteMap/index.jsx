@@ -3,13 +3,18 @@ import {StyleSheet, Dimensions} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import MapViewDirections from 'react-native-maps-directions';
 
-const HomeMap = () => {
+const HomeMap = ({originPlace, destinationPlace}) => {
     const {height, width} = Dimensions.get('window');
-    const LATITUDE_DELTA = 0.03; // zoom level
+    const LATITUDE_DELTA = 0.1; // zoom level
     const LONGITUDE_DELTA = LATITUDE_DELTA * (width / height);
 
-    const origin = {latitude: 28.451627, longitude: -16.263045};
-    const destination = {latitude: 28.453512, longitude: -16.262729};
+    const originLoc = originPlace?.details?.geometry?.location;
+    const destinationLoc = destinationPlace?.details?.geometry?.location;
+    const origin = {latitude: originLoc.lat, longitude: originLoc.lng};
+    const destination = {
+        latitude: destinationLoc.lat,
+        longitude: destinationLoc.lng,
+    };
 
     return (
         // <View style={styles.container}>
@@ -18,8 +23,8 @@ const HomeMap = () => {
             provider={PROVIDER_GOOGLE} // remove if not using Google Maps
             showsUserLocation={true}
             region={{
-                latitude: 28.450627,
-                longitude: -16.263045,
+                latitude: originLoc.lat,
+                longitude: originLoc.lng,
                 latitudeDelta: LATITUDE_DELTA,
                 longitudeDelta: LONGITUDE_DELTA,
             }}>

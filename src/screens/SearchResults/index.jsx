@@ -6,13 +6,17 @@ import UberTypes from '../../components/UberTypes';
 
 const SearchResults = () => {
     const route = useRoute();
-    const {params} = route;
-    console.warn(params);
+    const {
+        params: {originPlace, destinationPlace},
+    } = route;
 
     return (
         <View style={{display: 'flex', justifyContent: 'space-between'}}>
             <View style={{height: Dimensions.get('window').height - 400}}>
-                <RouteMap />
+                <RouteMap
+                    originPlace={originPlace}
+                    destinationPlace={destinationPlace}
+                />
             </View>
             <View style={{height: 400}}>
                 <UberTypes />
