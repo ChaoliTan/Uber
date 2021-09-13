@@ -16,7 +16,7 @@ Using createDrawerNavigator() from @react-navigation/drawer.
 Using createStackNavigator() from @react-navigation/stack to navigate between different screens.
 
 <p align="center" width="100%">
-<img src='https://user-images.githubusercontent.com/56459128/131390095-ad85fccb-5365-47cb-bc84-e4727b3f33b7.png' alt="Stack Navigation" width="375" style="margin: 0 5" margin-right="5"/>
+<img src='https://user-images.githubusercontent.com/56459128/133142694-853fdcf1-cfb4-4485-9b14-533fb8011dc8.png' alt="Stack Navigation" width="375" style="margin: 0 5" margin-right="5"/>
 <img src='https://user-images.githubusercontent.com/56459128/131390219-f46b76af-1273-4219-bd4d-fe4bef58f2af.png' alt="Default location" width="375" />
 <img src='https://user-images.githubusercontent.com/56459128/131390409-461dc7ae-eb15-476d-a893-518d5e4a284c.png' alt="Route directions" width="375" />
 </p>
