@@ -27,7 +27,7 @@ Places autocomplete when users are typing, with the functionality of Home, Work,
 
 <p align="center" width="100%">
 <img src='https://user-images.githubusercontent.com/56459128/131390219-f46b76af-1273-4219-bd4d-fe4bef58f2af.png' alt="Default location" width="375" />
-<img src='https://user-images.githubusercontent.com/56459128/131390243-64d58a4d-f094-41ad-b24f-a2b9934082ac.png' alt="Places autocomplete" width="375" />
+<img src='https://user-images.githubusercontent.com/56459128/133143224-095fe795-165c-421c-ba15-f1b753a701e3.png' alt="Places autocomplete" width="375" />
 </p>
 
 ## Route directions
